@@ -25,12 +25,11 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
+      - name: Publish to NuGet
+        # You may pin to the exact commit or the version.
+        # uses: tedd/publish-nuget-neo@8280d4649639b061518aa366de86e1b483666002
+        uses: tedd/publish-nuget-neo@v1.0.2
+        with:
+          # NuGet API key to authenticate on NuGet server. DO NOT PUT KEY DIRECTLY IN HERE. Use Secrets function in GitHub for example, i.e. dollarsign{{secrets.YOUR_NUGET_API_KEY}}.
+          NUGET_KEY:  ${{secrets.NUGET_API_KEY}}
 
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
