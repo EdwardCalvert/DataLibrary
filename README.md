@@ -1,6 +1,8 @@
 # DataLibrary
 A data wrapper for Dapper and MySQL, from https://www.youtube.com/watch?v=_JxC6EUxbDo
 
+NuGet package at https://www.nuget.org/packages/EdCalvert.DataLibrary/1.0.0
+
 It offers two methods in the IDataAccess file for all CRUD operations:
 ```C#
 public interface IDataAccess
