@@ -27,6 +27,6 @@ Code sample, from project chili (https://github.com/EdwardCalvert/prRecipieDatab
 
         public async Task<List<SearchQuery>> FindWordsAPISearch(string search)
         {
-            return await _data.LoadData<SearchQuery, dynamic>("SELECT * FROM SearchQuery WHERE SearchTerm = @searchTerm", new { searchTerm = search }, _config.GetConnectionString("recipeDatabase"));
+            return await _data.LoadMultiple<SearchQuery, dynamic>("SELECT * FROM SearchQuery WHERE SearchTerm = @searchTerm", new { searchTerm = search }, _config.GetConnectionString("recipeDatabase"));
         }
 ```
