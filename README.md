@@ -13,7 +13,7 @@ public interface IDataAccess
     }
 ```
 
-Stupidly, namespace is ```C# DataLibrary```
+Stupidly, namespace is ``` DataLibrary```
 
 I would reccomend injecting this as a service, to create loosely coupled service. 
 
