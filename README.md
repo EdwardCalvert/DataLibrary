@@ -1,6 +1,7 @@
 # DataLibrary
 A data wrapper for Dapper and MySQL, from https://www.youtube.com/watch?v=_JxC6EUxbDo
 
+
 NuGet package at https://www.nuget.org/packages/EdCalvert.DataLibrary/1.0.0
 
 It offers two methods in the IDataAccess file for all CRUD operations:
@@ -11,6 +12,9 @@ public interface IDataAccess
         Task SaveData<T>(string sql, T Parameters, string connectionString);
     }
 ```
+
+Stupidly, namespace is ```C# DataLibrary```
+
 I would reccomend injecting this as a service, to create loosely coupled service. 
 
 
